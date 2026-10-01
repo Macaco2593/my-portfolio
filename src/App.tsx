@@ -2,33 +2,26 @@
 import { useState } from "react";
 import ContentViewer, { ContentViewerBody } from "./components/contentViewer";
 import { Files, Search, GitBranch, X } from "lucide-react";
-import { archivos } from "./data/archivos"; // Importamos los datos
+import { archivos } from "./data/archivos";
 
 function App() {
-  // Estado para los archivos abiertos en las pestañas
   const [openFiles, setOpenFiles] = useState([archivos[0]]);
-  // Estado para saber cuál es el archivo que estamos viendo actualmente
   const [activeFileId, setActiveFileId] = useState<number | null>(
     archivos[0].id,
   );
 
-  // Función para abrir un archivo
   const handleOpenFile = (archivo: any) => {
-    // Si no está abierto, lo agregamos a las pestañas
     if (!openFiles.find((f) => f.id === archivo.id)) {
       setOpenFiles([...openFiles, archivo]);
     }
-    // Lo marcamos como el archivo activo
     setActiveFileId(archivo.id);
   };
 
-  // Función para cerrar una pestaña
   const handleCloseFile = (e: React.MouseEvent, id: number) => {
-    e.stopPropagation(); // Evita que se dispare el click de la pestaña
+    e.stopPropagation();
     const newOpenFiles = openFiles.filter((f) => f.id !== id);
     setOpenFiles(newOpenFiles);
 
-    // Si cerramos el archivo que estaba activo, pasamos al último de la lista
     if (activeFileId === id) {
       setActiveFileId(
         newOpenFiles.length > 0
@@ -38,30 +31,25 @@ function App() {
     }
   };
 
-  // Buscamos el contenido del archivo activo para mostrarlo
   const activeFileContent = archivos.find(
     (f) => f.id === activeFileId,
   )?.content;
 
   return (
     <div className="flex flex-col h-screen bg-[#1e1e1e] font-sans text-[#cccccc] overflow-hidden">
-      {/* --- HEADER (Barra de Título) --- */}
       <header className="flex items-center justify-center h-8 w-full bg-[#323233] border-b border-[#1e1e1e] select-none">
         <h3 className="text-[12px] text-[#cccccc]">
           Tu Nombre - Visual Studio Code
         </h3>
       </header>
 
-      {/* --- CONTENEDOR PRINCIPAL --- */}
       <main className="flex h-full w-full overflow-hidden">
-        {/* Barra de Actividad (Activity Bar - Extrema izquierda) */}
         <aside className="w-12 shrink-0 bg-[#333333] flex flex-col items-center py-4 gap-6 text-[#858585]">
           <Files className="w-6 h-6 text-white cursor-pointer" />
           <Search className="w-6 h-6 hover:text-white cursor-pointer transition-colors" />
           <GitBranch className="w-6 h-6 hover:text-white cursor-pointer transition-colors" />
         </aside>
 
-        {/* Explorador (Sidebar) */}
         <div className="w-60 shrink-0 bg-[#252526] flex flex-col border-r border-[#1e1e1e]">
           <div className="px-4 py-3 text-[11px] tracking-wider text-[#cccccc] font-semibold select-none">
             EXPLORADOR

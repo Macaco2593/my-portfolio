@@ -30,7 +30,7 @@ const FormularioContacto = () => {
 
       if (response.ok) {
         setEstado("success");
-        setFormData({ nombre: "", email: "", mensaje: "" }); // Limpiar formulario
+        setFormData({ nombre: "", email: "", mensaje: "" });
       } else {
         setEstado("error");
       }
@@ -51,7 +51,6 @@ const FormularioContacto = () => {
       </p>
 
       <div className="ml-4 flex flex-col gap-6 border-l border-[#404040] pl-6 py-2">
-        {/* Nombre */}
         <div className="flex flex-col gap-2">
           <p>
             <span className="text-[#569cd6]">const</span>{" "}
@@ -68,7 +67,6 @@ const FormularioContacto = () => {
           />
         </div>
 
-        {/* Email */}
         <div className="flex flex-col gap-2">
           <p>
             <span className="text-[#569cd6]">const</span>{" "}
@@ -85,7 +83,6 @@ const FormularioContacto = () => {
           />
         </div>
 
-        {/* Mensaje */}
         <div className="flex flex-col gap-2">
           <p>
             <span className="text-[#569cd6]">const</span>{" "}
@@ -136,14 +133,12 @@ const FormularioContacto = () => {
           )}
         </div>
 
-        {/* Redes (Pega aquí el código de tus enlaces de correo, GitHub, etc. que hicimos en el paso anterior) */}
         <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-sans mt-6">
           <p className="text-[#cccccc] mb-5">
             También puedes contactarme directamente por:
           </p>
 
           <div className="flex flex-col gap-4">
-            {/* Correo */}
             <a
               href="mailto:santiagoppjq13@gmail.com"
               className="inline-flex items-center gap-3 text-[#cccccc] hover:text-[#4fc1ff] transition-colors w-max"
@@ -244,18 +239,16 @@ export const archivos = [
     icon: <Home className="w-4 h-4 text-blue-400" />,
     content: (
       <div className="flex flex-col gap-6 font-sans max-w-4xl">
-        {/* Contenedor 1: Tarjeta de perfil y código */}
         <div className="bg-[#252526] p-6 rounded-xl flex flex-col md:flex-row items-center md:items-start gap-8 shadow-lg border border-[#333333]">
           {/* Imagen de perfil */}
           <div className="shrink-0">
             <img
-              src="https://avatars.githubusercontent.com/Macaco2593" // Cambia esto por la ruta de tu foto (ej: "/mi-foto.jpg")
+              src="https://avatars.githubusercontent.com/Macaco2593"
               alt="Santiago Paredes"
               className="w-40 h-40 rounded-full object-cover border-4 border-[#333333] shadow-md"
             />
           </div>
 
-          {/* Bloque de código con colores de VSCode */}
           <div className="w-full bg-[#1e1e1e] p-4 rounded-lg overflow-x-auto font-mono text-[14px] leading-loose">
             <p>
               <span className="text-[#569cd6]">const</span>{" "}
@@ -293,7 +286,6 @@ export const archivos = [
           </div>
         </div>
 
-        {/* Contenedor 2: Sobre mi y Botón */}
         <div className="bg-[#252526] p-8 rounded-xl shadow-lg border border-[#333333] font-mono">
           <h2 className="text-2xl font-bold text-white mb-4 ">
             Desarrollador Frontend
@@ -328,7 +320,6 @@ export const archivos = [
     icon: <User className="w-4 h-4 text-green-400" />,
     content: (
       <div className="font-mono text-[15px] leading-relaxed max-w-4xl">
-        {/* Declaración de la función con colores de VSCode */}
         <p className="mb-4">
           <span className="text-[#569cd6]">function</span>{" "}
           <span className="text-[#dcdcaa]">sobreMi</span>
@@ -336,9 +327,7 @@ export const archivos = [
           <span className="text-[#ffd700]">{`{`}</span>
         </p>
 
-        {/* Contenedor principal con indentación (línea guía a la izquierda) */}
         <div className="ml-6 flex flex-col gap-6 pl-6 py-2 border-l border-[#404040]">
-          {/* Contenedor 1: Formación */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748]">
             <h3 className="font-mono text-white font-bold text-lg mb-3">
               Formación
@@ -351,7 +340,6 @@ export const archivos = [
             </ul>
           </div>
 
-          {/* Contenedor 2: Experiencia */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-mono">
             <h3 className="text-white font-bold text-lg mb-3">Experiencia</h3>
             <div className="text-[#cccccc] flex flex-col gap-2.5">
@@ -369,7 +357,6 @@ export const archivos = [
             </div>
           </div>
 
-          {/* Contenedor 3: Intereses */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-mono">
             <h3 className="text-white font-bold text-lg mb-3">Intereses</h3>
             <p className="text-[#cccccc]">
@@ -378,7 +365,6 @@ export const archivos = [
             </p>
           </div>
 
-          {/* Contenedor 4: Botón CV */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] flex flex-col items-start gap-4 font-mono">
             <p className="text-[#cccccc]">
               Si quieres conocer más sobre mi experiencia y formación:
@@ -409,7 +395,6 @@ export const archivos = [
           </div>
         </div>
 
-        {/* Cierre de la función */}
         <p className="mt-4">
           <span className="text-[#ffd700]">{`}`}</span>
         </p>
@@ -422,7 +407,6 @@ export const archivos = [
     icon: <Folder className="w-4 h-4 text-yellow-400" />,
     content: (
       <div className="font-mono text-[15px] leading-relaxed max-w-5xl">
-        {/* Declaración del Array */}
         <p className="mb-4">
           <span className="text-[#569cd6]">const</span>{" "}
           <span className="text-[#4fc1ff]">proyectos</span>{" "}
@@ -430,9 +414,7 @@ export const archivos = [
           <span className="text-[#ffd700]">{`[`}</span>
         </p>
 
-        {/* Línea guía y contenedor de tarjetas */}
         <div className="ml-4 flex flex-col gap-6 pl-6 py-2 border-l border-[#404040]">
-          {/* PROYECTO 1: ADADET */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-mono transition-transform hover:-translate-y-1 duration-300">
             <h3 className="text-white font-bold text-xl mb-2">
               ADADET - Plataforma de Deportes Acuáticos
@@ -445,7 +427,6 @@ export const archivos = [
               regionales de natación.
             </p>
 
-            {/* Etiquetas de Tecnologías */}
             <div className="flex flex-wrap gap-2 mb-6">
               {[
                 "Astro",
@@ -464,9 +445,7 @@ export const archivos = [
               ))}
             </div>
 
-            {/* Botones de Enlaces */}
             <div className="flex flex-wrap gap-3">
-              {/* Botón Código (Azul) */}
               <a
                 href="https://github.com/Macaco2593/static-astro-sport-website" // Aquí pon el link de tu repo
                 target="_blank"
@@ -489,9 +468,8 @@ export const archivos = [
                 </svg>
                 Código
               </a>
-              {/* Botón Demo (Verde) */}
               <a
-                href="https://adadet.org/" // Aquí pon el link de tu demo
+                href="https://adadet.org/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 bg-[#238636] hover:bg-[#2ea043] text-white px-4 py-2 rounded text-sm font-medium transition-colors"
@@ -515,8 +493,6 @@ export const archivos = [
               </a>
             </div>
           </div>
-
-          {/* PROYECTO 2: PORTFOLIO */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-mono transition-transform hover:-translate-y-1 duration-300">
             <h3 className="text-white font-bold text-xl mb-2">
               VSCode Interactive Portfolio
@@ -528,7 +504,6 @@ export const archivos = [
               y estilado avanzado.
             </p>
 
-            {/* Etiquetas de Tecnologías */}
             <div className="flex flex-wrap gap-2 mb-6">
               {[
                 "React",
@@ -547,7 +522,6 @@ export const archivos = [
               ))}
             </div>
 
-            {/* Botones de Enlaces */}
             <div className="flex flex-wrap gap-3">
               <a
                 href="#"
@@ -574,7 +548,6 @@ export const archivos = [
             </div>
           </div>
 
-          {/* PROYECTO 3: PRÓXIMAMENTE (Para completar los 3 contenedores) */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] border-dashed font-mono opacity-70">
             <h3 className="text-gray-400 font-bold text-xl mb-2 flex items-center gap-2">
               <svg
@@ -605,7 +578,6 @@ export const archivos = [
           </div>
         </div>
 
-        {/* Cierre del Array */}
         <p className="mt-4">
           <span className="text-[#ffd700]">{`]`}</span>
           <span className="text-[#d4d4d4]">;</span>
@@ -619,7 +591,6 @@ export const archivos = [
     icon: <Zap className="w-4 h-4 text-purple-400" />,
     content: (
       <div className="font-mono text-[15px] leading-relaxed max-w-4xl">
-        {/* Declaración del Objeto */}
         <p className="mb-4">
           <span className="text-[#569cd6]">const</span>{" "}
           <span className="text-[#4fc1ff]">habilidades</span>{" "}
@@ -627,12 +598,9 @@ export const archivos = [
           <span className="text-[#ffd700]">{`{`}</span>
         </p>
 
-        {/* Línea guía y contenedor de tarjetas */}
         <div className="ml-4 flex flex-col gap-6 pl-6 py-2 border-l border-[#404040]">
-          {/* CONTENEDOR 1: Frontend */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-sans transition-all hover:border-[#404040]">
             <h3 className="text-white font-bold text-xl mb-4">Frontend</h3>
-            {/* Grid para forzar 4 columnas exactas en PC (2 en móviles) */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 "Astro",
@@ -654,7 +622,6 @@ export const archivos = [
             </div>
           </div>
 
-          {/* CONTENEDOR 2: Backend */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-sans transition-all hover:border-[#404040]">
             <h3 className="text-white font-bold text-xl mb-4">Backend</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -669,7 +636,6 @@ export const archivos = [
             </div>
           </div>
 
-          {/* CONTENEDOR 3: Herramientas */}
           <div className="bg-[#1F2934] p-6 rounded-lg shadow-md border border-[#2d3748] font-sans transition-all hover:border-[#404040]">
             <h3 className="text-white font-bold text-xl mb-4">Herramientas</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -685,7 +651,6 @@ export const archivos = [
           </div>
         </div>
 
-        {/* Cierre del Objeto */}
         <p className="mt-4">
           <span className="text-[#ffd700]">{`}`}</span>
           <span className="text-[#d4d4d4]">;</span>
