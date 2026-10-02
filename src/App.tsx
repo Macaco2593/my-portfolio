@@ -39,7 +39,7 @@ function App() {
     <div className="flex flex-col h-screen bg-[#1e1e1e] font-sans text-[#cccccc] overflow-hidden">
       <header className="flex items-center justify-center h-8 w-full bg-[#323233] border-b border-[#1e1e1e] select-none">
         <h3 className="text-[12px] text-[#cccccc]">
-          Tu Nombre - Visual Studio Code
+          Santiago - Visual Studio Code
         </h3>
       </header>
 
