@@ -51,8 +51,8 @@ export default function SobreMi() {
             Si quieres conocer más sobre mi experiencia y formación:
           </p>
           <a
-            href="/tu-cv.pdf"
-            download="CV_Santiago_Paredes.pdf"
+            href="/CV-santiago.pdf"
+            download="CV-santiago.pdf"
             className="inline-flex items-center gap-2 bg-[#238636] hover:bg-[#2ea043] text-white px-6 py-2.5 rounded-md font-medium transition-colors"
           >
             {/* Ícono de Descarga */}

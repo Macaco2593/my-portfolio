@@ -1,6 +1,15 @@
 export default function Inicio() {
   return (
-    <div className="flex flex-col gap-6 font-sans max-w-4xl">
+    <div className="flex flex-col gap-6 font-mono max-w-4xl">
+      <div className="font-consolas">
+        <h2 className="font-mono text-4xl font-bold text-teal-400 mb-4 pb-2 ">
+          # ¡Buenas, Bienvenid@ a mi portfolio!
+        </h2>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Desde el explorador de archivos podrás manejar qué ves. <br /> <br />
+          Disfruta de lo simple.
+        </p>
+      </div>
       <div className="bg-[#252526] p-6 rounded-xl flex flex-col md:flex-row items-center md:items-start gap-8 shadow-lg border border-[#333333]">
         {/* Imagen de perfil */}
         <div className="shrink-0">
@@ -56,7 +65,7 @@ export default function Inicio() {
           Soy un desarrollador web apasionado por crear interfaces de usuario
           hermosas e intuitivas. Me encanta transformar problemas complejos en
           diseños simples y soluciones escalables. Especializado en el
-          ecosistema de React, siempre busco aprender las mejores tecnologías
+          ecosistema de Astro, siempre busco aprender las mejores tecnologías
           para llevar los proyectos al siguiente nivel.
         </p>
 

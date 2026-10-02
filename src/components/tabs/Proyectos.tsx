@@ -18,7 +18,7 @@ export default function Proyectos() {
             deportes acuáticos del estado Táchira. La plataforma centraliza la
             información deportiva y ofrece un sistema de resultados en vivo para
             competencias regionales de natación, ranking estadal automatizado.
-            Además, implementé flujos de automatización integrando agentes de IA
+            Implementé flujos de automatización integrando agentes de IA
             potenciados por Opencode, optimizando tareas repetitivas clave como
             la redacción y publicación de noticias o la estructuración
             automática de álbumes fotográficos

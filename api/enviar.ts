@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -12,6 +13,7 @@ export default async function handler(req: any, res: any) {
   try {
     const data = await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
+
       to: "santiagopjq13@gmail.com",
       subject: `Nuevo mensaje de tu Portfolio de: ${nombre}`,
       html: `
